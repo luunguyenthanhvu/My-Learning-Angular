@@ -1,13 +1,12 @@
 # TypeScript - Tổng Quan và Cách Sử Dụng
 
 ## 1. Giới Thiệu TypeScript
-TypeScript là một ngôn ngữ lập trình mã nguồn mở do Microsoft phát triển, mở rộng từ JavaScript với hệ thống kiểu tĩnh (static typing). Nó giúp viết mã dễ bảo trì hơn và giảm lỗi khi làm việc với dự án lớn.
+TypeScript là một ngôn ngữ lập trình mở rộng từ JavaScript với hệ thống kiểu tĩnh (static typing). Nó giúp viết mã dễ bảo trì hơn và giảm lỗi khi làm việc với dự án lớn.
 
 ### **Ưu điểm của TypeScript**:
 - **Kiểu tĩnh (Static Typing)**: Giúp phát hiện lỗi trong quá trình biên dịch.
 - **Hỗ trợ OOP**: Hỗ trợ class, interface, inheritance, v.v.
 - **Tương thích với JavaScript**: Có thể dùng với các thư viện JavaScript.
-- **Cải thiện Developer Experience**: IntelliSense, Autocomplete mạnh mẽ.
 
 ---
 ## 2. Cài Đặt TypeScript
@@ -117,5 +116,5 @@ tsc
 - Hỗ trợ lập trình hướng đối tượng, interface, generic, module v.v.
 - Có thể dùng với nhiều framework như React, Angular, Node.js.
 
-👉 **Khuyến nghị**: Nếu bạn đang phát triển dự án lớn, hãy sử dụng TypeScript để cải thiện chất lượng mã nguồn! 🚀
+👉 **Khuyến nghị**: Nếu bạn đang phát triển dự án lớn, hãy sử dụng TypeScript để cải thiện chất lượng mã nguồn! PS: Làm 1 mình thì js được rồi 🐧.
 
