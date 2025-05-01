@@ -1,6 +1,12 @@
-<div class="border border-r-amber-50 p-1.5 shadow-lg">
-    <button class="flex flew-row">
-        <img src="assets/header-img.jpg"/>
-        <span> User name</span>
+<div class="border w-60 h-fit hover:bg-white/10 rounded-lg border-r-amber-50 p-1.5 shadow-lg">
+    <button (click)="onSelectUser()" class="flex cursor-pointer w-full flex-row items-center gap-3">
+        <img class="w-16 h-16 object-cover rounded-full"
+            [src]="imagePath()"
+            [alt]="name()"
+        />
+
+        <span class="text-lg font-medium truncate max-w-[150px] text-white" [title]="name()">
+            {{name()}}
+        </span>
     </button>
 </div>
