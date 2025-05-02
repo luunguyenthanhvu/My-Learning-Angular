@@ -2,19 +2,26 @@
 
 <main class="flex flex-row gap-10 max-w-3/5 w-* mx-auto margin">
     <div>
-        <ul id="user">
-            <li>
+        <ul id="user" class="space-y-4">
+            @for (user of users; track user.id) {
+              <li>
                 <app-user
-                  [id]="users[0].id"
-                  [avatar]="users[0].avatar"
-                  [name]="users[0].name"
+                  [user]="user"
                   (select)="onSelectUser($event)"
                 ></app-user>
             </li>
+            }
         </ul>
     </div>
 
     <div>
-        <app-tasks> </app-tasks>
+        @if(selectedUser) {
+          <app-tasks
+            [id]="users[0].id"
+            [name]="selectedUser.name"
+          />
+        } @else {
+          <p>Select a user to see their task!</p>
+        }
     </div>
 </main>
