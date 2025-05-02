@@ -1,13 +1,28 @@
-<section id="tasks">
-  <header>
-    <p>{{name()}} 's Tasks</p>
+<section id="tasks" class="rounded-lg flex-1 border shadow-lg border-r-amber-50 w-full p-3 h-[350px] overflow-y-auto">
+  <header class="flex flex-row justify-between items-center mb-3">
+    <p class="font-bold text-3xl">{{name()}} 's Tasks</p>
 
     <menu>
-      <button>Add Task</button>
+      <button class="cursor-pointer rounded-lg bg-[#1b98ff] text-white border p-2 hover:bg-[#1280d6] transition-colors">Add Task</button>
     </menu>
   </header>
 
   <ul>
-    <li></li>
+    <li>
+      <task/>
+    </li>
+    <li>
+      <task/>
+    </li>
+    <li>
+      <task/>
+    </li>
+    <li>
+      <task/>
+    </li>
+    <li>
+      <task/>
+    </li>
+
   </ul>
 </section>
