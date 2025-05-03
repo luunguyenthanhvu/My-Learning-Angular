@@ -1,13 +1,14 @@
 <app-header/>
 
 <main class="flex flex-row gap-10 max-w-3/5 w-* mx-auto mb-3">
-    <div>
+    <div class="h-[550px] overflow-y-auto">
         <ul id="user" class="space-y-4">
             @for (user of users; track user.id) {
               <li>
                 <app-user
                   [user]="user"
                   (select)="onSelectUser($event)"
+                  [selected]="user.id === selectedUserId"
                 ></app-user>
             </li>
             }
@@ -17,7 +18,7 @@
     <div class="flex-1">
         @if(selectedUser) {
           <app-tasks
-            [id]="users[0].id"
+            [id]="selectedUser.id"
             [name]="selectedUser.name"
           />
         } @else {

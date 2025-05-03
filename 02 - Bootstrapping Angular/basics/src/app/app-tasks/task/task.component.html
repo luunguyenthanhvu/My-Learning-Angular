@@ -1,8 +1,13 @@
 <article class="border border-white/10 bg-white/5 backdrop-blur-md transition hover:bg-white/10 mb-3 shadow-lg p-3">
-  <h2 class="font-bold text-xl mb-1">Task Title</h2>
-  <time class="text-sm text-white/70">Time</time>
-  <p class="my-2 text-white/90">SUMMARY</p>
+  <h2 class="font-bold text-xl mb-1">{{task().title}}</h2>
+  <time class="text-sm text-white/70">{{task().dueDate}}</time>
+  <p class="my-2 text-white/90">{{task().sumary}}</p>
   <p class="flex justify-end">
-    <button class="px-2 py-2 text-sm cursor-pointer text-white bg-blue-800 hover:bg-blue-700 rounded-md">Complete</button>
+    <button
+      class="px-2 py-2 text-sm cursor-pointer text-white bg-blue-800 hover:bg-blue-700 rounded-md"
+      (click)="onCompleteTask()"
+    >
+      Complete
+    </button>
   </p>
 </article>

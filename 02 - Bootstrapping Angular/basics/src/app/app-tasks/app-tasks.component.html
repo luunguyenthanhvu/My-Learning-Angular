@@ -1,4 +1,4 @@
-<section id="tasks" class="rounded-lg flex-1 border shadow-lg border-r-amber-50 w-full p-3 h-[350px] overflow-y-auto">
+<section id="tasks" class="rounded-lg flex-1 border shadow-lg border-r-amber-50 w-full p-3 h-[550px] overflow-y-auto">
   <header class="flex flex-row justify-between items-center mb-3">
     <p class="font-bold text-3xl">{{name()}} 's Tasks</p>
 
@@ -8,21 +8,14 @@
   </header>
 
   <ul>
-    <li>
-      <task/>
-    </li>
-    <li>
-      <task/>
-    </li>
-    <li>
-      <task/>
-    </li>
-    <li>
-      <task/>
-    </li>
-    <li>
-      <task/>
-    </li>
+    @for (task of selectedUserTasks; track task.id) {
+      <li>
+        <task
+          [task]="task"
+          (complete)="onCompleteTask($event)"
+        />
+      </li>
+    }
 
   </ul>
 </section>

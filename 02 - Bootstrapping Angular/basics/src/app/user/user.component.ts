@@ -7,12 +7,7 @@ import {
   output,
   computed,
 } from '@angular/core';
-
-interface User {
-  id: string;
-  avatar: string;
-  name: string;
-}
+import { User } from './user.model';
 
 @Component({
   selector: 'app-user',
@@ -21,7 +16,7 @@ interface User {
 })
 export class UserComponent {
   user = input.required<User>();
-
+  selected = input.required<boolean>();
   select = output<string>();
 
   imagePath = computed(() => 'assets/users/' + this.user().avatar);
