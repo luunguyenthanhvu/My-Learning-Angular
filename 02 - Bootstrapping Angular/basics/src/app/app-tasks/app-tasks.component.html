@@ -3,7 +3,12 @@
     <p class="font-bold text-3xl">{{name()}} 's Tasks</p>
 
     <menu>
-      <button class="cursor-pointer rounded-lg bg-[#1b98ff] text-white border p-2 hover:bg-[#1280d6] transition-colors">Add Task</button>
+      <button
+        class="cursor-pointer rounded-lg bg-[#1b98ff] text-white border p-2 hover:bg-[#1280d6] transition-colors"
+        (click)="onOpenDialog()"
+      >
+        Add task
+      </button>
     </menu>
   </header>
 

@@ -20,9 +20,13 @@
           <app-tasks
             [id]="selectedUser.id"
             [name]="selectedUser.name"
+            (addNewTask)="onAddNewTask($event)"
           />
         } @else {
           <p>Select a user to see their task!</p>
         }
     </div>
+    <new-task
+      [isOpen] = true
+    />
 </main>

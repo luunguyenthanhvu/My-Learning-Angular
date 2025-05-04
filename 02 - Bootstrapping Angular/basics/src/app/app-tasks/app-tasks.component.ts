@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { TaskComponent } from './task/task.component';
 
 @Component({
@@ -10,6 +10,7 @@ import { TaskComponent } from './task/task.component';
 export class AppTasksComponent {
   id = input<string | undefined>();
   name = input<string | undefined>();
+  addNewTask = output<string>();
 
   tasks = [
     {
@@ -36,5 +37,12 @@ export class AppTasksComponent {
 
   onCompleteTask(id: string) {
     this.tasks = this.tasks.filter((task) => task.id !== id);
+  }
+
+  onOpenDialog() {
+    const currentId = this.id();
+    if (currentId) {
+      this.addNewTask.emit(currentId);
+    }
   }
 }

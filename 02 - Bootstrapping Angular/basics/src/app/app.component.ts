@@ -3,9 +3,15 @@ import { HeaderComponent } from './header/header.component';
 import { UserComponent } from './user/user.component';
 import { DUMMY_USERS } from '../dummy-users';
 import { AppTasksComponent } from './app-tasks/app-tasks.component';
+import { NewTaskComponent } from './app-tasks/new-task/new-task.component';
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, UserComponent, AppTasksComponent],
+  imports: [
+    HeaderComponent,
+    UserComponent,
+    AppTasksComponent,
+    NewTaskComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -19,5 +25,10 @@ export class AppComponent {
 
   onSelectUser(id: string) {
     this.selectedUserId = id;
+  }
+
+  onAddNewTask(userId: string | undefined) {
+    console.log('ok ne');
+    alert('ddang add task user Id' + userId);
   }
 }
